@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>和弘食品｜経営構造診断レポート — LIMITSHIFT 30</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=DM+Mono:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap');
+
+:root {
+  --ink:    #0f1318;
+  --white:  #f9f7f2;
+  --off:    #f1ede4;
+  --mid:    #ddd8ce;
+  --rule:   #c8c2b6;
+  --gray:   #8a8680;
+  --navy:   #1a2640;
+  --navy2:  #243350;
+  --red:    #8c2010;
+  --red-p:  #f3e8e4;
+  --gold:   #a07820;
+  --gold-p: #f5ead8;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--ink);font-family:'Noto Serif JP',serif;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* progress */
+#prog{position:fixed;top:0;left:0;right:0;height:2px;background:var(--mid);z-index:1000;}
+#prog-fill{height:100%;width:0;background:var(--gold);transition:width .1s linear;}
+
+/* nav */
+nav{position:fixed;top:2px;left:0;right:0;height:50px;background:rgba(249,247,242,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);z-index:999;display:flex;align-items:center;justify-content:space-between;padding:0 40px;}
+.nav-l{display:flex;align-items:center;gap:14px;}
+.nav-logo{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--gray);}
+.nav-sep{width:1px;height:14px;background:var(--rule);}
+.nav-co{font-size:12px;font-weight:500;letter-spacing:1px;}
+.nav-cta{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;background:var(--navy);color:var(--white);padding:8px 18px;border:none;cursor:pointer;border-radius:1px;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--red);}
+
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 400px;padding-top:52px;overflow:hidden;}
+.hero-l{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--rule);position:relative;overflow:hidden;}
+.hero-bg{position:absolute;right:-30px;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:220px;font-weight:300;font-style:italic;color:transparent;-webkit-text-stroke:1px var(--mid);line-height:1;pointer-events:none;opacity:.4;}
+.hero-c{position:relative;z-index:1;}
+.kicker{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:4px;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:28px;}
+.kicker::before{content:'';width:28px;height:1px;background:var(--gold);}
+.hero-co{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:3px;color:var(--gray);margin-bottom:14px;}
+.hero-h1{font-size:clamp(26px,3.2vw,44px);font-weight:700;letter-spacing:1px;line-height:1.5;margin-bottom:28px;}
+.hero-h1 em{font-style:normal;color:var(--red);border-bottom:2px solid var(--red);padding-bottom:1px;}
+.hero-sub{font-size:13.5px;font-weight:300;line-height:2.2;color:#555;max-width:520px;margin-bottom:44px;}
+.hero-meta{display:flex;gap:28px;padding-top:28px;border-top:1px solid var(--rule);}
+.meta-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;color:var(--gray);margin-bottom:5px;}
+.meta-val{font-size:12px;font-weight:500;}
+
+/* hero right */
+.hero-r{background:var(--navy);padding:72px 36px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.hero-r::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.025) 39px,rgba(255,255,255,.025) 40px);}
+.idx-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:4px;color:rgba(255,255,255,.3);margin-bottom:28px;position:relative;}
+.idx-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.07);text-decoration:none;transition:opacity .2s;position:relative;}
+.idx-item:last-of-type{border-bottom:1px solid rgba(255,255,255,.07);}
+.idx-item:hover{opacity:.65;}
+.idx-num{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--gold);flex-shrink:0;margin-top:2px;}
+.idx-text{color:var(--white);font-size:13px;font-weight:300;line-height:1.6;letter-spacing:.3px;}
+.idx-arr{margin-left:auto;color:rgba(255,255,255,.2);font-family:'DM Mono',monospace;font-size:14px;flex-shrink:0;}
+.r-cta{display:block;margin-top:36px;background:var(--gold);color:var(--white);padding:17px;text-align:center;font-size:14px;font-weight:500;letter-spacing:1px;border-radius:1px;text-decoration:none;transition:opacity .2s;position:relative;}
+.r-cta:hover{opacity:.85;}
+.r-cta-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;color:rgba(255,255,255,.35);text-align:center;margin-top:8px;position:relative;}
+
+/* sections */
+.si{max-width:880px;margin:0 auto;padding:96px 40px;}
+.sec-kick{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:4px;color:var(--gray);display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.sec-kick::before{content:'';width:20px;height:1px;background:var(--gray);}
+.sec-h2{font-size:clamp(20px,2.8vw,32px);font-weight:700;letter-spacing:1px;line-height:1.45;margin-bottom:44px;}
+
+/* situation */
+#s1{background:var(--white);border-top:1px solid var(--rule);}
+.num-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:36px;}
+.num-cell{background:var(--white);padding:26px;}
+.num-cell.hi{background:var(--navy);}
+.num-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:3px;color:var(--gray);margin-bottom:10px;}
+.num-cell.hi .num-label{color:rgba(255,255,255,.35);}
+.num-big{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:300;line-height:1;margin-bottom:6px;}
+.num-cell.hi .num-big{color:var(--white);}
+.num-big .warn{color:var(--gold);}
+.num-big .danger{color:#e07060;}
+.num-desc{font-size:11.5px;color:var(--gray);line-height:1.9;}
+.num-cell.hi .num-desc{color:rgba(255,255,255,.4);}
+.prose{font-size:13.5px;line-height:2.3;color:#4a4a4a;padding-left:22px;border-left:3px solid var(--rule);max-width:660px;}
+.prose strong{color:var(--ink);font-weight:700;}
+
+/* hypothesis */
+#s2{background:var(--navy);}
+#s2 .sec-kick{color:rgba(255,255,255,.25);}
+#s2 .sec-kick::before{background:rgba(255,255,255,.25);}
+#s2 .sec-h2{color:var(--white);}
+.hyp-list{display:flex;flex-direction:column;}
+.hyp{display:grid;grid-template-columns:64px 1fr;padding:34px 0;border-top:1px solid rgba(255,255,255,.07);opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.hyp:last-child{border-bottom:1px solid rgba(255,255,255,.07);}
+.hyp.vis{opacity:1;transform:translateY(0);}
+.hyp-n{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;font-style:italic;color:rgba(255,255,255,.05);line-height:1;padding-top:2px;}
+.hyp-b{padding-left:28px;}
+.htag{display:inline-block;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;padding:2px 9px;border-radius:1px;margin-bottom:12px;}
+.htag.open{background:rgba(160,120,32,.25);color:#d4aa60;border:1px solid rgba(160,120,32,.35);}
+.htag.part{background:rgba(255,255,255,.05);color:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.1);}
+.htag.lock{background:rgba(255,255,255,.03);color:rgba(255,255,255,.15);border:1px dashed rgba(255,255,255,.08);}
+.hyp-title{font-size:17px;font-weight:700;color:var(--white);letter-spacing:.3px;line-height:1.55;margin-bottom:14px;}
+.hyp-title.dim{color:rgba(255,255,255,.25);}
+.hyp-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:2.2;font-weight:300;max-width:600px;}
+.hyp-desc strong{color:rgba(255,255,255,.8);font-weight:500;}
+.lock-box{background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.1);border-radius:2px;padding:18px 22px;margin-top:10px;display:flex;align-items:center;gap:14px;}
+.lock-txt{font-size:11.5px;color:rgba(255,255,255,.2);line-height:1.8;font-family:'DM Mono',monospace;letter-spacing:.5px;}
+.lock-btn{margin-left:auto;flex-shrink:0;background:transparent;border:1px solid rgba(160,120,32,.4);color:rgba(160,120,32,.75);padding:7px 14px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;cursor:pointer;border-radius:1px;text-decoration:none;transition:all .2s;white-space:nowrap;}
+.lock-btn:hover{background:rgba(160,120,32,.15);}
+
+/* root cause */
+#s3{background:var(--off);border-top:1px solid var(--rule);}
+.quote-box{border-left:4px solid var(--gold);padding:22px 28px;background:var(--white);margin-bottom:36px;position:relative;}
+.quote-box::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:72px;color:var(--gold);opacity:.12;position:absolute;top:-8px;left:14px;line-height:1;}
+.quote-text{font-size:15px;font-weight:500;line-height:2;letter-spacing:.3px;position:relative;}
+.quote-src{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--gray);margin-top:10px;}
+.diag{display:grid;grid-template-columns:1fr 44px 1fr 44px 1fr;align-items:center;gap:0;margin:36px 0;}
+.d-node{background:var(--white);border:1.5px solid var(--rule);padding:18px 14px;text-align:center;border-radius:2px;}
+.d-node.crit{border-color:var(--gold);background:var(--gold-p);}
+.d-label{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--gray);margin-bottom:6px;}
+.d-node.crit .d-label{color:var(--gold);}
+.d-text{font-size:11.5px;font-weight:500;line-height:1.6;}
+.d-arr{display:flex;align-items:center;justify-content:center;color:var(--rule);font-size:18px;font-family:'DM Mono',monospace;}
+
+/* cta */
+#s4{background:var(--white);}
+.cta-box{border:1.5px solid var(--rule);display:grid;grid-template-columns:1fr 360px;overflow:hidden;}
+.cta-l{padding:50px 44px;border-right:1px solid var(--rule);}
+.cta-kick{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--gold);margin-bottom:16px;}
+.cta-h3{font-size:clamp(18px,2.2vw,26px);font-weight:700;line-height:1.5;margin-bottom:20px;}
+.cta-desc{font-size:13px;color:#555;line-height:2.1;margin-bottom:28px;}
+.cta-what{display:flex;flex-direction:column;gap:9px;margin-bottom:28px;}
+.cta-wi{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.7;}
+.cta-icon{color:var(--gold);flex-shrink:0;margin-top:2px;}
+.cta-info{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.5px;color:var(--gray);line-height:1.9;padding:14px;background:var(--off);border:1px solid var(--rule);}
+.cta-r{background:var(--navy);padding:50px 36px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.cta-r::before{content:'';position:absolute;top:-60px;right:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(160,120,32,.18) 0%,transparent 70%);}
+.form-title{font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px;}
+.form-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;color:rgba(255,255,255,.25);margin-bottom:24px;}
+.f-field{margin-bottom:12px;}
+.f-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.25);display:block;margin-bottom:5px;text-transform:uppercase;}
+.f-input{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:1px;padding:10px 13px;color:var(--white);font-family:'Noto Serif JP',serif;font-size:13px;outline:none;transition:border-color .2s;}
+.f-input:focus{border-color:rgba(160,120,32,.5);}
+.f-input::placeholder{color:rgba(255,255,255,.18);}
+.f-sel{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:1px;padding:10px 13px;color:rgba(255,255,255,.5);font-family:'Noto Serif JP',serif;font-size:13px;outline:none;appearance:none;cursor:pointer;}
+.f-sub-btn{width:100%;background:var(--gold);color:white;border:none;cursor:pointer;padding:15px;font-family:'Noto Serif JP',serif;font-size:14px;font-weight:700;letter-spacing:1px;border-radius:1px;margin-top:6px;transition:opacity .2s;}
+.f-sub-btn:hover{opacity:.85;}
+.f-note{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.5px;color:rgba(255,255,255,.18);text-align:center;margin-top:10px;line-height:1.7;}
+
+footer{background:var(--navy);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;}
+.ft-logo{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:rgba(255,255,255,.25);}
+.ft-note{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.5px;color:rgba(255,255,255,.12);}
+
+/* success */
+.success{display:none;position:fixed;inset:0;z-index:2000;background:rgba(10,12,18,.96);align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px;}
+.success.show{display:flex;}
+.s-icon{font-size:44px;margin-bottom:22px;}
+.s-title{font-size:22px;font-weight:700;color:white;margin-bottom:14px;}
+.s-sub{font-size:13px;color:rgba(255,255,255,.45);line-height:2;max-width:420px;margin-bottom:28px;}
+.s-close{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,.25);cursor:pointer;background:none;border:none;text-decoration:underline;}
+
+/* anim */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+.anim{opacity:0;}
+.anim.vis{animation:fadeUp .65s ease forwards;}
+.d1{animation-delay:.1s;} .d2{animation-delay:.25s;} .d3{animation-delay:.4s;} .d4{animation-delay:.55s;}
+
+@media(max-width:860px){
+  nav{padding:0 18px;}
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-l{padding:72px 22px 44px;border-right:none;border-bottom:1px solid var(--rule);}
+  .hero-bg{display:none;}
+  .hero-r{padding:40px 22px;}
+  .si{padding:68px 22px;}
+  .num-grid{grid-template-columns:1fr 1fr;}
+  .diag{grid-template-columns:1fr;gap:8px;}
+  .d-arr{transform:rotate(90deg);}
+  .cta-box{grid-template-columns:1fr;}
+  .cta-l{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);padding:36px 22px;}
+  .cta-r{padding:36px 22px;}
+  footer{flex-direction:column;gap:10px;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"><div id="prog-fill"></div></div>
+
+<nav>
+  <div class="nav-l">
+    <div class="nav-logo">Proudfoot Japan</div>
+    <div class="nav-sep"></div>
+    <div class="nav-co">和弘食品株式会社｜経営構造診断レポート</div>
+  </div>
+  <a href="file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html#s4" class="nav-cta">面談を申し込む</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-l">
+    <div class="hero-bg">診断</div>
+    <div class="hero-c">
+      <div class="kicker anim d1 vis">LIMITSHIFT 30 — 経営構造診断</div>
+      <div class="hero-co anim d2 vis">WAKOU FOODS CO., LTD. — TSE Standard 2813</div>
+      <h1 class="hero-h1 anim d3 vis">顧客の成長が<br>自社の消滅リスクになる——<br><em>黒子型BtoBの構造的限界</em></h1>
+      <p class="hero-sub anim d4 vis">「ザ・グレートリセット」を掲げ、海外展開・新事業探索に注力する中で、既存事業の根幹を揺るがす可能性のある意思決定構造の盲点について、3つの仮説を持っています。</p>
+      <div class="hero-meta anim d4 vis">
+        <div><div class="meta-label">対象企業</div><div class="meta-val">和弘食品株式会社</div></div>
+        <div><div class="meta-label">診断基準日</div><div class="meta-val">2026年3月</div></div>
+        <div><div class="meta-label">根拠資料</div><div class="meta-val">有報・中計・競合比較</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="idx-title">このページの構成</div>
+    <a href="file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html#s1" class="idx-item"><div class="idx-num">01</div><div class="idx-text">御社の経営状況と数値の整理</div><div class="idx-arr">→</div></a>
+    <a href="file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html#s2" class="idx-item"><div class="idx-num">02</div><div class="idx-text">事業構造を脅かす3つの仮説</div><div class="idx-arr">→</div></a>
+    <a href="file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html#s3" class="idx-item"><div class="idx-num">03</div><div class="idx-text">意思決定構造の根本的な問題</div><div class="idx-arr">→</div></a>
+    <a href="file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html#s4" class="idx-item"><div class="idx-num">04</div><div class="idx-text">30分の対話申し込み</div><div class="idx-arr">→</div></a>
+    <a href="file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html#s4" class="r-cta">仮説の詳細を30分で話したい</a>
+    <div class="r-cta-sub">面談後に判断いただければ十分です</div>
+  </div>
+</section>
+
+<!-- S1 SITUATION -->
+<section id="s1">
+  <div class="si">
+    <div class="sec-kick anim">01 — Current Situation</div>
+    <h2 class="sec-h2 anim d1">御社が直面している<br>経営構造上の数値</h2>
+    <div class="num-grid anim d2">
+      <div class="num-cell">
+        <div class="num-label">日本セグメント営業利益率</div>
+        <div class="num-big"><span class="warn">3.0</span><span style="font-size:18px;color:var(--gray);">%</span></div>
+        <div class="num-desc">中計目標4%に対し3年間で0.7pt改善のみ。構造的低収益が継続している。</div>
+      </div>
+      <div class="num-cell hi">
+        <div class="num-label">米国セグメント営業利益率</div>
+        <div class="num-big">29<span style="font-size:18px;color:rgba(255,255,255,.4);">%超</span></div>
+        <div class="num-desc">連結営業利益の約79%を米国が稼ぐ。日本の約10倍の収益力。</div>
+      </div>
+      <div class="num-cell">
+        <div class="num-label">国内経常利益に占める米国配当</div>
+        <div class="num-big"><span class="warn">48</span><span style="font-size:18px;color:var(--gray);">%</span></div>
+        <div class="num-desc">697百万円中336百万円が米国子会社受取配当。本社単体では自立していない構造。</div>
+      </div>
+      <div class="num-cell">
+        <div class="num-label">PBR（株式市場の評価）</div>
+        <div class="num-big"><span class="danger">0.84</span><span style="font-size:18px;color:var(--gray);">倍</span></div>
+        <div class="num-desc">1倍割れ継続。配当性向15%の低さと成長ストーリーの不透明さが市場評価を抑制。</div>
+      </div>
+    </div>
+    <div class="prose anim d3">
+      連結では売上高162.5億円・営業利益率9.8%と<strong>中計目標を前倒し達成</strong>しています。しかしこの数値は、米国事業の超過達成が連結を底上げしているために生まれています。<strong>国内事業だけを見れば、利益率3%という構造的な低収益</strong>が3年間変わっていない。この「隠蔽構造」が、以下の仮説の起点です。
+    </div>
+  </div>
+</section>
+
+<!-- S2 HYPOTHESIS -->
+<section id="s2">
+  <div class="si">
+    <div class="sec-kick" style="color:rgba(255,255,255,.25);">02 — Hypothesis</div>
+    <h2 class="sec-h2" style="color:var(--white);">事業構造を脅かす<br>3つの構造的仮説</h2>
+    <div class="hyp-list">
+
+      <!-- HYP 1 OPEN -->
+      <div class="hyp">
+        <div class="hyp-n">1</div>
+        <div class="hyp-b">
+          <div class="htag open">開示 — 仮説 01</div>
+          <div class="hyp-title">顧客が成長するほど、<br>内製化インセンティブが高まり失った顧客は二度と戻らない</div>
+          <div class="hyp-desc">
+            北米14拠点・ラーメンチェーンとの深い関係性は<strong>顧客の成功体験</strong>でもあります。しかし顧客が成長し、スープ調達量が一定規模を超えた時点で、内製化投資の経済合理性が生まれます。内製設備投資が完了した後は、価格優位がなければ外部調達には戻りません。<br><br>
+            和弘食品はNBブランド力で顧客を引き留める手段を持たず、リテール・EC・家庭用という代替収益源も一切ない。<strong>「黒子として顧客の成功を支えてきた誇り」そのものが、このリスクの認識を視野の外に押しやるブラインドスポット</strong>になっている可能性があります。
+          </div>
+        </div>
+      </div>
+
+      <!-- HYP 2 PARTIAL -->
+      <div class="hyp">
+        <div class="hyp-n">2</div>
+        <div class="hyp-b">
+          <div class="htag part">概要のみ開示 — 仮説 02</div>
+          <div class="hyp-title">国内利益率3%の本質は価格支配権の欠如であり、<br>中計の対策はその前提を変えていない</div>
+          <div class="hyp-desc">
+            「既存事業の磨き込み」という力点が、<strong>供給側の深掘り（製造効率・営業生産性）に集中している限り、価格を決める権限が顧客側にあるという構造は変わらない</strong>という仮説を持っています。
+          </div>
+          <div class="lock-box">
+            <div style="font-size:18px;opacity:.18;">🔒</div>
+            <div class="lock-txt">この仮説の詳細（根拠・不可逆性の評価・<br>解決の糸口となるアプローチ）は面談でお伝えします</div>
+            <a href="file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html#s4" class="lock-btn">面談で聞く →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HYP 3 LOCKED -->
+      <div class="hyp">
+        <div class="hyp-n">3</div>
+        <div class="hyp-b">
+          <div class="htag lock">面談でのみ開示 — 仮説 03</div>
+          <div class="hyp-title dim">〔米国高収益が経営者の危機感を鈍らせている構造と、<br>それが顕在化する不可逆なタイミングについて〕</div>
+          <div class="lock-box" style="margin-top:14px;">
+            <div style="font-size:18px;opacity:.18;">🔒</div>
+            <div class="lock-txt">最も重要で、かつ最も直視しにくい仮説です。<br>なぜ今の経営体制でこのリスクが見えにくくなっているのか——その構造的な理由をこの仮説に込めています。</div>
+            <a href="file:///C:/Users/USER/Downloads/lp_wakou_limitshift30.html#s4" class="lock-btn">面談で聞く →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- S3 ROOT CAUSE -->
+<section id="s3">
+  <div class="si">
+    <div class="sec-kick anim">03 — Root Cause</div>
+    <h2 class="sec-h2 anim d1">3つの仮説に共通する<br>構造的な問題</h2>
+    <div class="quote-box anim d2">
+      <div class="quote-text">北米の外食チャネルが業務用スープを外部調達し続けるという世界が続く前提で、生産能力の拡張・セールスルートの拡大という「供給側の深掘り」対策を取っている。「誰が最終的にスープを飲むのか」という川下側の変化に対するケイパビリティを一切持っていない。</div>
+      <div class="quote-src">— LIMITSHIFT 30 診断フレームワーク / 構造的前提の特定</div>
+    </div>
+    <div class="diag anim d3">
+      <div class="d-node"><div class="d-label">現状の対策</div><div class="d-text">生産拡張・<br>営業生産性向上・<br>海外第2拠点展開</div></div>
+      <div class="d-arr">→</div>
+      <div class="d-node crit"><div class="d-label">構造的前提の壁</div><div class="d-text">顧客が外部調達を<br>続けるという<br>前提が不変</div></div>
+      <div class="d-arr">→</div>
+      <div class="d-node"><div class="d-label">結果</div><div class="d-text">内製化リスクへの<br>対応ケイパビリティが<br>蓄積されない</div></div>
+    </div>
+    <div class="prose anim d4">
+      リミットシフト30が診断するのは「何が足りないか」ではなく、<strong>「何が足りないという認識を阻んでいる意思決定の構造」</strong>です。御社の場合、「既存事業の中でなぜあの製品・あの顧客だけが利益を出せているのか」という問いへの答えが、国内利益率改善の起点であり、次の成長の種でもある可能性があります。30分の対話で、この仮説が当たっているかどうかを確認させてください。
+    </div>
+  </div>
+</section>
+
+<!-- S4 CTA -->
+<section id="s4">
+  <div class="si">
+    <div class="sec-kick anim">04 — Request a Meeting</div>
+    <h2 class="sec-h2 anim d1">30分の対話を申し込む</h2>
+    <div class="cta-box anim d2">
+      <div class="cta-l">
+        <div class="cta-kick">この面談でお伝えすること</div>
+        <h3 class="cta-h3">仮説の精度を、<br>御社の内部情報で検証する30分</h3>
+        <p class="cta-desc">ページに記載した内容は外部公開情報から構築した仮説です。面談では仮説02・03の詳細をお伝えし、「当たっているか・外れているか」のフィードバックをいただくことが目的です。</p>
+        <div class="cta-what">
+          <div class="cta-wi"><div class="cta-icon">✦</div><div>仮説02の詳細——価格支配権の欠如と、中計の対策がその構造を変えられない理由</div></div>
+          <div class="cta-wi"><div class="cta-icon">✦</div><div>仮説03の全開示——米国高収益が経営者の危機感を鈍らせている構造と顕在化のタイミング</div></div>
+          <div class="cta-wi"><div class="cta-icon">✦</div><div>「既存事業の中の勝ちパターン」を起点にした、国内利益率改善と新規事業の同時解法の仮説</div></div>
+        </div>
+        <div class="cta-info">所要時間：30分 / Web会議（Zoom または Google Meet）<br>日程調整：お申し込み後24時間以内にご連絡します<br>費用：無料</div>
+      </div>
+      <div class="cta-r">
+        <div class="form-title">面談申し込みフォーム</div>
+        <div class="form-sub">必須項目のみ / 送信後24時間以内に返信</div>
+        <div class="f-field"><label class="f-label">お名前</label><input class="f-input" type="text" placeholder="加世田 十七七"></div>
+        <div class="f-field"><label class="f-label">メールアドレス</label><input class="f-input" type="email" placeholder="kaseda@wakoushokuhin.co.jp"></div>
+        <div class="f-field">
+          <label class="f-label">ご希望の日程（おおよそで）</label>
+          <select class="f-sel">
+            <option value="">── 選択してください</option>
+            <option>今週中</option><option>来週</option><option>再来週以降</option><option>メールで調整したい</option>
+          </select>
+        </div>
+        <div class="f-field"><label class="f-label">仮説について事前に共有したいこと（任意）</label><input class="f-input" type="text" placeholder="「仮説1については既に議論しています」等"></div>
+        <button class="f-sub-btn" onclick="handleSubmit()">申し込む</button>
+        <div class="f-note">送信後、担当者より24時間以内にご連絡します<br>セールスではなく、仮説の検証が目的の対話です</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-logo">Proudfoot Japan — LIMITSHIFT 30</div>
+  <div class="ft-note">本ページは和弘食品株式会社 代表取締役社長CEO 加世田様専用の資料です</div>
+</footer>
+
+<div class="success" id="success">
+  <div class="s-icon">✦</div>
+  <div class="s-title" style="color:white;">申し込みを受け付けました</div>
+  <div class="s-sub">24時間以内に担当者よりご連絡いたします。<br>面談では仮説02・03の詳細をお伝えします。</div>
+  <button class="s-close" onclick="document.getElementById(&#39;success&#39;).classList.remove(&#39;show&#39;)">閉じる</button>
+</div>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const d=document.documentElement;
+  const pct=(d.scrollTop/(d.scrollHeight-d.clientHeight))*100;
+  document.getElementById('prog-fill').style.width=pct+'%';
+});
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis');});},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.anim,.hyp').forEach(el=>obs.observe(el));
+setTimeout(()=>{document.querySelectorAll('.anim').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('vis');});},80);
+function handleSubmit(){
+  const inp=document.querySelectorAll('.f-input');
+  let ok=true;
+  [inp[0],inp[1]].forEach(i=>{if(!i.value.trim()){i.style.borderColor='rgba(140,32,16,.7)';ok=false;}else i.style.borderColor='';});
+  if(ok)document.getElementById('success').classList.add('show');
+}
+</script>
+
+
+</body></html>
